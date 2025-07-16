@@ -33,6 +33,9 @@ app.use("/api/", userRoute);
 app.use("/api/", displayRoute);
 app.use("/api/", orderRoute);
 
+app.get("/api/ping",(req,res)=>{
+   res.status(200).send("pong")
+})
 
 mongooseConnect();
 
